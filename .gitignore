@@ -1,5 +1,5 @@
-Utils/
-.vscode/
+*/Utils*/
+*Utils*/
+*/output*/
 
-TP N°1 - Estructura de Secuencia/Utils/
-TP N°1 - Estructura de Secuencia/Ejercicios/output/
+.vscode/
