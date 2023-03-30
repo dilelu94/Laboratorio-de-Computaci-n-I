@@ -25,7 +25,7 @@ Calcular porcentaje de alfajorA, alfajorB y alfajorC vendidos
   porcentajeB = alfajorB * 100 / totalVendidos;
   porcentajeC = alfajorC * 100 / totalVendidos;
   cout << "El porcentaje de Alfajor A vendido es: " << porcentajeA << "%" << endl;
-  cout << "El porcentaje de Alfajor B vendido es: " << printf("%.2f", porcentajeB) << "%" << endl;
+  cout << "El porcentaje de Alfajor B vendido es: " << porcentajeB << "%" << endl;
   cout << "El porcentaje de Alfajor C vendido es: " << porcentajeC << "%" << endl;
   
   system("pause");
