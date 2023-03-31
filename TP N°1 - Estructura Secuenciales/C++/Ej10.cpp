@@ -10,7 +10,7 @@ using namespace std;
 
 int main(){
   int horas, dias, horasRestantes;
-  cout << "Ingrese horas: ";
+  cout << "Ingrese horas: " << endl;
   cin >> horas;
   dias = horas / 24;
   horasRestantes = horas % 24;

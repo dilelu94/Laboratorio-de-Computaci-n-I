@@ -14,7 +14,7 @@ int main(){
 //1 huevo = $12
 */
   int docena, huevos, huevosRestantes, importe;
-  cout << "Ingrese cantidad de huevos: ";
+  cout << "Ingrese cantidad de huevos: " << endl;
   cin >> huevos;
   docena = huevos / 12;
   huevosRestantes = huevos % 12;

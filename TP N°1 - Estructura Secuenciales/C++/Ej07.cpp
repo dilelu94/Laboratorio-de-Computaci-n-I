@@ -14,9 +14,9 @@ int main(){
 
 */
   int importe, porcentaje, importeAPagar;
-  cout << "Ingrese el importe de la venta: ";
+  cout << "Ingrese el importe de la venta: " << endl;
   cin >> importe;
-  cout << "Ingrese el porcentaje de descuento: ";
+  cout << "Ingrese el porcentaje de descuento: " << endl;
   cin >> porcentaje;
   importeAPagar = importe - (importe * porcentaje / 100);
   cout << "El importe a pagar es: $" << importeAPagar << endl;

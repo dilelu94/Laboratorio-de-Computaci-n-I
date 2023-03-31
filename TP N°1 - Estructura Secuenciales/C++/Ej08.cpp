@@ -10,9 +10,9 @@ using namespace std;
 
 int main(){
   int importeConDescuento, importeSinDescuento, porcentajeDescuento;
-  cout << "Ingrese el importe de la venta con descuento: ";
+  cout << "Ingrese el importe de la venta con descuento: " << endl;
   cin >> importeConDescuento;
-  cout << "Ingrese el importe de la venta sin descuento: ";
+  cout << "Ingrese el importe de la venta sin descuento: " << endl;
   cin >> importeSinDescuento;
   porcentajeDescuento = (importeSinDescuento - importeConDescuento) * 100 / importeSinDescuento;
   cout << "El porcentaje de descuento es del: " << porcentajeDescuento << "%" << endl;
