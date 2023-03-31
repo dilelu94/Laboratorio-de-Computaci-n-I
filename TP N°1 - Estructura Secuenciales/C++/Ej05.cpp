@@ -11,9 +11,9 @@ using namespace std;
 int main(){
 /*
 Calcular porcentaje de alfajorA, alfajorB y alfajorC vendidos
-
 */
-  int alfajorA, alfajorB, alfajorC, totalVendidos, porcentajeA, porcentajeB, porcentajeC;
+  int alfajorA, alfajorB, alfajorC, totalVendidos;
+  float porcentajeA, porcentajeB, porcentajeC;
   cout << "Ingrese la Cantidad de Alfajores A Vendidos" << endl;
   cin >> alfajorA;
   cout << "Ingrese la Cantidad de Alfajores B Vendidos" << endl;
