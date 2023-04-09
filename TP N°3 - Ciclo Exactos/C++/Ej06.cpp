@@ -1,37 +1,40 @@
-///Ejercicio: Ej06IngresarIndexDeUnaListaYValoresDeLosElementosDeLaLista
-///Autor: Diego Leonel Luque
-///Fecha: 08/04/2023
-///Comentario:
+/// Ejercicio: Ej06IngresarIndexDeUnaListaYValoresDeLosElementosDeLaLista
+/// Autor: Diego Leonel Luque
+/// Fecha: 08/04/2023
+/// Comentario:
 
-#include<iostream>
-#include<cstdlib>
-#include<list>
+#include <iostream>
+#include <cstdlib>
+#include <list>
 
 using namespace std;
 
-int main(){
-/*
+int main()
+{
+  /*
+  Ingresar index(N) de una lista y los valores de la lista
+  */
 
-*/
-int index, ;
-std::list<int> numbers = {};
-cout << "Ingrese N: ";
-cin >> numero1;
-cout << "Ingrese los numeros de la lista: ";
-cin >> numero2;
+  int N;
+  cout << "Ingrese la cantidad de objetos de la lista: ";
+  cin >> N;
 
-if (numero1 > numero2){
-    numeroMayor = numero1;
-    numeroMenor = numero2;
-  } else {
-    numeroMayor = numero2;
-    numeroMenor = numero1;
+  int lista[N]; // arreglo para almacenar los objetos de la lista
+
+  // i se inicializa en 0, se ejecuta el ciclo mientras i sea menor a N y se incrementa i en 1
+  for (int i = 0; i < N; i++)
+  {
+    cout << "Ingrese el elemento " << i + 1 << " de la lista: ";
+    cin >> lista[i];
   }
 
-do{
-    numeroMenor = numeroMenor + 1;
-    cout << numeroMenor << endl;
-}while(numeroMenor < numeroMayor);
+  // Imprimir solo los elementos positivos de la lista
+  cout << "Los elementos positivos de la lista son: ";
+  for (int i = 0; i < N; i++)
+  {
+    if (lista[i] > 0)
+      cout << lista[i] << " ";
+  }
 
   system("pause");
   return 0;
