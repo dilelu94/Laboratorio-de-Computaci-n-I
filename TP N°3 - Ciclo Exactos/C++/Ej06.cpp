@@ -20,7 +20,7 @@ cin >> numero1;
 cout << "Ingrese los numeros de la lista: ";
 cin >> numero2;
 
- if (numero1 > numero2){
+if (numero1 > numero2){
     numeroMayor = numero1;
     numeroMenor = numero2;
   } else {
