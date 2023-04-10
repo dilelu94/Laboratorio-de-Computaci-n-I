@@ -1,14 +1,15 @@
-///Ejercicio: Ej12IngresarUnaListaDe10NumerosInformarElMaximoDeLosNegativosYElMinimoDeLosPositivos
-///Autor: Diego Leonel Luque
-///Fecha: 09/04/2023
-///Comentario:
+/// Ejercicio: Ej12IngresarUnaListaDe10NumerosInformarElMaximoDeLosNegativosYElMinimoDeLosPositivos
+/// Autor: Diego Leonel Luque
+/// Fecha: 09/04/2023
+/// Comentario:
 
-#include<iostream>
-#include<cstdlib>
+#include <iostream>
+#include <cstdlib>
 
 using namespace std;
 
-int main(){
+int main()
+{
 
   int lista[10];
   int maximoNegativo = -2147483647 - 1;
@@ -56,8 +57,8 @@ int main(){
   {
     cout << "El minimo de los positivos es: " << minimoPositivo << endl;
   }
-  
-  cout<<endl;
+
+  cout << endl;
   system("pause");
   return 0;
 }

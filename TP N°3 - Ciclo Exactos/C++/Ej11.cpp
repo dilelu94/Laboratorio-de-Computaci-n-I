@@ -1,14 +1,15 @@
-///Ejercicio: Ej11IngresarUnaListaDe10NumerosInformarElMaximoYElMinimo
-///Autor: Diego Leonel Luque
-///Fecha: 09/04/2023
-///Comentario:
+/// Ejercicio: Ej11IngresarUnaListaDe10NumerosInformarElMaximoYElMinimo
+/// Autor: Diego Leonel Luque
+/// Fecha: 09/04/2023
+/// Comentario:
 
-#include<iostream>
-#include<cstdlib>
+#include <iostream>
+#include <cstdlib>
 
 using namespace std;
 
-int main(){
+int main()
+{
 
   int lista[10];
   int maximo = -2147483647 - 1;
@@ -35,7 +36,7 @@ int main(){
 
   cout << "El maximo es: " << maximo << endl;
   cout << "El minimo es: " << minimo << endl;
-  
+
   system("pause");
   return 0;
 }
