@@ -11,17 +11,17 @@ using namespace std;
 int main()
 {
   int numero;
-  int divisores = 0;
+  int CantidadDeDivisores = 0;
   cout << "Ingrese un numero: ";
   cin >> numero;
   for (int i = 1; i <= numero; i++)
   {
     if (numero % i == 0)
     {
-      divisores++;
+      CantidadDeDivisores++;
     }
   }
-  if (divisores == 2)
+  if (CantidadDeDivisores == 2)
   {
     cout << "El numero es primo" << endl;
   }

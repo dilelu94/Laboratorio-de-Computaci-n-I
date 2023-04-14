@@ -14,7 +14,7 @@ int main()
   Ejemplo 8, 4, -5, 6, 10, 5, 18 se informa -5 y 5.
   */
   int lista[7];
-  int anteultimoImpar = 0;
+  int anteUltimoImpar = 0;
   int ultimoImpar = 0;
   cout << "Ingrese 7 numeros: " << endl;
   for (int i = 0; i < 7; i++)
@@ -22,11 +22,11 @@ int main()
     cin >> lista[i];
     if (lista[i] % 2 != 0)
     {
-      anteultimoImpar = ultimoImpar;
+      anteUltimoImpar = ultimoImpar;
       ultimoImpar = lista[i];
     }
   }
-  cout << "El anteultimo numero impar es: " << anteultimoImpar << endl;
+  cout << "El anteultimo numero impar es: " << anteUltimoImpar << endl;
   cout << "El ultimo numero impar es: " << ultimoImpar << endl;
 
   system("pause");

@@ -12,31 +12,30 @@ int main()
 {
 
   int lista[7];
-  int primerImpar = 2147483647;
-  int segundoImpar = 2147483647;
+  int primerImpar = 0;
+  int segundoImpar = 0;
   cout << "Ingrese 7 numeros: " << endl;
   for (int i = 0; i < 7; i++)
   {
     cin >> lista[i];
     if (lista[i] % 2 != 0)
     {
-      if (lista[i] < primerImpar)
+      if (primerImpar == 0)
       {
-        segundoImpar = primerImpar;
         primerImpar = lista[i];
       }
-      else if (lista[i] < segundoImpar)
+      else if (segundoImpar == 0)
       {
         segundoImpar = lista[i];
       }
     }
   }
 
-  if (primerImpar == 2147483647 && segundoImpar == 2147483647)
+  if (primerImpar == 0 && segundoImpar == 0)
   {
     cout << "No se ingresaron numeros impares" << endl;
   }
-  else if (segundoImpar == 2147483647)
+  else if (segundoImpar == 0)
   {
     cout << "Solo se ingreso un numero impar: " << primerImpar << endl;
   }

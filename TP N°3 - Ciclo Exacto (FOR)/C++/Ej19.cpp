@@ -16,6 +16,7 @@ int main()
   {
     cin >> numero[i];
   }
+  
   for (int i = 0; i < 4; i++)
   {
     for (int j = i + 1; j < 5; j++)

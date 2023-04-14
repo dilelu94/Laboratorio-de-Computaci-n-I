@@ -12,8 +12,8 @@ int main()
 {
 
   int lista[10];
-  int maximo = -2147483647 - 1;
-  int minimo = 2147483647;
+  int maximo = 0;
+  int minimo = 0;
 
   cout << "Ingrese 10 numeros: " << endl;
   for (int i = 0; i < 10; i++)
@@ -24,6 +24,12 @@ int main()
 
   for (int i = 0; i < 10; i++)
   {
+    if (i == 0)
+    {
+      maximo = lista[i];
+      minimo = lista[i];
+    }
+    else
     if (lista[i] > maximo)
     {
       maximo = lista[i];

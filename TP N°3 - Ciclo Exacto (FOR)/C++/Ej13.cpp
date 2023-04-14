@@ -1,4 +1,4 @@
-/// Ejercicio: Ej09IngresarUnaListaDe10NumerosInformarElMaximo
+/// Ejercicio: Ej13IngresarUnaListaDeDiezNumerosInformarElMaximoDeLosPares
 /// Autor: Diego Leonel Luque
 /// Fecha: 09/04/2023
 /// Comentario:
@@ -12,24 +12,29 @@ int main()
 {
 
   int lista[10];
-  int maximo = -2147483648; // Maximo valor negativo posible(supuestamente?)
-
+  int maximoPar = 0;
   cout << "Ingrese 10 numeros: " << endl;
   for (int i = 0; i < 10; i++)
   {
-    cout << "Ingrese el elemento " << i + 1 << " de la lista: ";
     cin >> lista[i];
   }
 
   for (int i = 0; i < 10; i++)
   {
-    if (lista[i] > maximo)
+    if (i == 0)
     {
-      maximo = lista[i];
+      maximoPar = lista[i];
+    }
+    else if (lista[i] % 2 == 0)
+    {
+      if (lista[i] > maximoPar)
+      {
+        maximoPar = lista[i];
+      }
     }
   }
 
-  cout << "El maximo es: " << maximo << endl;
+  cout << "El maximo de los pares es: " << maximoPar << endl;
 
   cout << endl;
   system("pause");

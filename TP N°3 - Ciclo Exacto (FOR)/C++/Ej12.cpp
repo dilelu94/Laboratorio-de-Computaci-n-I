@@ -12,8 +12,8 @@ int main()
 {
 
   int lista[10];
-  int maximoNegativo = -2147483647 - 1;
-  int minimoPositivo = 2147483647;
+  int maximoNegativo = 0;
+  int minimoPositivo = 0;
 
   cout << "Ingrese 10 numeros: " << endl;
   for (int i = 0; i < 10; i++)
@@ -24,6 +24,12 @@ int main()
 
   for (int i = 0; i < 10; i++)
   {
+    if (i == 0)
+    {
+      maximoNegativo = lista[i];
+      minimoPositivo = lista[i];
+    }
+    else
     if (lista[i] < 0)
     {
       if (lista[i] > maximoNegativo)
