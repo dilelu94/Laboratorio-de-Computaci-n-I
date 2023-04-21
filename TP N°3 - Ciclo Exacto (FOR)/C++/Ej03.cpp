@@ -11,15 +11,14 @@ using namespace std;
 int main()
 {
   /*
-  contador con un ciclo del 20 al 1
+  ciclo for con un ciclo del 20 al 1
   */
   int contador;
   contador = 20;
-  do
+  for (contador; contador >= 1; contador--)
   {
     cout << contador << endl;
-    contador = contador - 1;
-  } while (contador >= 1);
+  }
 
   system("pause");
   return 0;

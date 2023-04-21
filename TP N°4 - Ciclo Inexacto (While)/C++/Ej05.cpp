@@ -11,7 +11,7 @@ using namespace std;
 int main()
 {
   /*
-  usando ciclo for mostrar los numeros entre el menor y el mayor
+
   */
   int numero1, numero2, numeroMenor, numeroMayor;
   cout << "Ingrese el primer número: ";
@@ -30,10 +30,11 @@ int main()
     numeroMenor = numero1;
   }
 
-  for (numeroMenor; numeroMenor < numeroMayor; numeroMenor++)
+  do
   {
+    numeroMenor = numeroMenor + 1;
     cout << numeroMenor << endl;
-  }
+  } while (numeroMenor < numeroMayor);
 
   system("pause");
   return 0;

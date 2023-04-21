@@ -12,15 +12,15 @@ int main()
 {
   /*
 
-  contador con un ciclo del 1 al 10
+  contador con un ciclo for del 1 al 10
   */
   int contador;
   contador = 0;
-  do
+  for (int i = 0; i < 10; i++)
   {
     contador = contador + 1;
     cout << contador << endl;
-  } while (contador < 10);
+  }
 
   system("pause");
   return 0;

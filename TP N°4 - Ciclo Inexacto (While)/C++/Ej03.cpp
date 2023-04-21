@@ -1,4 +1,4 @@
-/// Ejercicio: Ej02MostrarPorPantallaLosNumerosDelUnoAl20SaltandoDeTresEnTres
+/// Ejercicio: Ej03MostrarPorPantallaLosNumerosDelVeinteAlUno
 /// Autor: Diego Leonel Luque
 /// Fecha: 08/04/2023
 /// Comentario:
@@ -11,14 +11,15 @@ using namespace std;
 int main()
 {
   /*
-  contador con un ciclo for del 1 al 20 arranca en el uno termina en el 20
+  contador con un ciclo del 20 al 1
   */
   int contador;
-  contador = 1;
-  for (contador; contador <= 20; contador += 3)
+  contador = 20;
+  do
   {
     cout << contador << endl;
-  }
+    contador = contador - 1;
+  } while (contador >= 1);
 
   system("pause");
   return 0;

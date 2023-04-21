@@ -12,7 +12,6 @@ int main()
 {
   /*
 
-
   */
   int lista[20];
   int positivos = 0;
