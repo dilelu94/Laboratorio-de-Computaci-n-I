@@ -1,6 +1,6 @@
-/// Ejercicio: Ej12IngresarUnaListaDe10NumerosInformarElMaximoDeLosNegativosYElMinimoDeLosPositivos
+/// Ejercicio: Ej12IngresarNumerosHastaIngresarUnCeroEInformarElPrimerYUltimoNumeroImparIngresado
 /// Autor: Diego Leonel Luque
-/// Fecha: 09/04/2023
+/// Fecha: 21/04/2023
 /// Comentario:
 
 #include <iostream>
@@ -10,61 +10,26 @@ using namespace std;
 
 int main()
 {
-
-  int lista[10];
-  int maximoNegativo = 0;
-  int minimoPositivo = 0;
-
-  cout << "Ingrese 10 numeros: " << endl;
-  for (int i = 0; i < 10; i++)
+  /*
+  
+  */
+  int numero, primerNumeroImpar, ultimoNumeroImpar;
+  while (numero != 0)
   {
-    cout << "Ingrese el elemento " << i + 1 << " de la lista: ";
-    cin >> lista[i];
-  }
-
-  for (int i = 0; i < 10; i++)
-  {
-    if (i == 0)
+    cout << "Ingrese un numero: ";
+    cin >> numero;
+    if (numero % 2 != 0)
     {
-      maximoNegativo = lista[i];
-      minimoPositivo = lista[i];
-    }
-    else
-    if (lista[i] < 0)
-    {
-      if (lista[i] > maximoNegativo)
+      if (primerNumeroImpar == 0)
       {
-        maximoNegativo = lista[i];
+        primerNumeroImpar = numero;
       }
-    }
-    else
-    {
-      if (lista[i] < minimoPositivo)
-      {
-        minimoPositivo = lista[i];
-      }
+      ultimoNumeroImpar = numero;
     }
   }
+  cout << "El primer numero impar ingresado es: " << primerNumeroImpar << endl;
+  cout << "El ultimo numero impar ingresado es: " << ultimoNumeroImpar << endl;
 
-  if (maximoNegativo == -2147483647 - 1)
-  {
-    cout << "No se ingresaron numeros negativos" << endl;
-  }
-  else
-  {
-    cout << "El maximo de los negativos es: " << maximoNegativo << endl;
-  }
-
-  if (minimoPositivo == 2147483647)
-  {
-    cout << "No se ingresaron numeros positivos" << endl;
-  }
-  else
-  {
-    cout << "El minimo de los positivos es: " << minimoPositivo << endl;
-  }
-
-  cout << endl;
   system("pause");
   return 0;
 }

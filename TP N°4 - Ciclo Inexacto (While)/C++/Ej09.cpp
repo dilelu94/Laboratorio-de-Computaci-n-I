@@ -30,6 +30,8 @@ int main()
       posicion = contador;
     }
   }
+  cout << "El maximo es: " << maximo << endl;
+  cout << "La posicion del maximo es: " << posicion << endl;
 
   system("pause");
   return 0;

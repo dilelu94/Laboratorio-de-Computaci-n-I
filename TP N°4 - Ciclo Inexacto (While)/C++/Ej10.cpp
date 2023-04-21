@@ -1,45 +1,41 @@
-///Ejercicio: Ej10IngresarUnaListaDe10NumerosInformarElMaximoYLaPosicionDelMaximo
-///Autor: Diego Leonel Luque
-///Fecha: 09/04/2023
-///Comentario:
+/// Ejercicio: EjIngresarNumerosHastaIngresarUnCeroEInformarElMaximoYElMinimoYLaPosicionDelMaximoYDelMinimo
+/// Autor: Diego Leonel Luque
+/// Fecha: 21/04/2023
+/// Comentario:
 
-#include<iostream>
-#include<cstdlib>
+#include <iostream>
+#include <cstdlib>
 
 using namespace std;
 
-int main(){
-
-  int lista[10];
-  int maximo = 0;
-  int posicion = 0;
-
-  cout << "Ingrese 10 numeros: " << endl;
-  for (int i = 0; i < 10; i++)
+int main()
+{
+  /*
+  
+  */
+  int numero, maximo = 0, minimo = 0;
+  while (numero != 0)
   {
-    cout << "Ingrese el elemento " << i + 1 << " de la lista: ";
-    cin >> lista[i];
-  }
+    cout << "Ingrese un numero: ";
+    cin >> numero;
 
-  for (int i = 0; i < 10; i++)
-  {
-    if (i == 0)
+    if (maximo == 0 & numero != 0)
     {
-      maximo = lista[i];
-      posicion = i+1;
+      maximo = numero;
+      minimo = numero;
     }
-    else
-    if (lista[i] > maximo)
+    else if (numero > maximo & numero != 0)
     {
-      maximo = lista[i];
-      posicion = i+1;
+      maximo = numero;
+    }
+    else if (numero < minimo & numero != 0)
+    {
+      minimo = numero;
     }
   }
-
   cout << "El maximo es: " << maximo << endl;
-  cout << "La posicion del maximo es: " << posicion << endl;
+  cout << "El minimo es: " << minimo << endl;
 
-  cout<<endl;
   system("pause");
   return 0;
 }

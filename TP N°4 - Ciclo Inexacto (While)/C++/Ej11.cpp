@@ -1,6 +1,6 @@
-/// Ejercicio: Ej11IngresarUnaListaDe10NumerosInformarElMaximoYElMinimo
+/// Ejercicio: Ej11IngresarNumerosHastaIngresarUnCeroEInformarElMaximoDeLosNegativosYElMinimoDeLosPositivosYLaPosicionDelMaximoDeLosNegativosYDelMinimoDeLosPositivos
 /// Autor: Diego Leonel Luque
-/// Fecha: 09/04/2023
+/// Fecha: 21/04/2023
 /// Comentario:
 
 #include <iostream>
@@ -10,38 +10,48 @@ using namespace std;
 
 int main()
 {
+  /*
 
-  int lista[10];
-  int maximo = 0;
-  int minimo = 0;
-
-  cout << "Ingrese 10 numeros: " << endl;
-  for (int i = 0; i < 10; i++)
+  */
+  int numero, maximoNegativo = 0, minimoPositivo = 0;
+  while (numero != 0)
   {
-    cout << "Ingrese el elemento " << i + 1 << " de la lista: ";
-    cin >> lista[i];
+    cout << "Ingrese un numero: ";
+    cin >> numero;
+
+    if (maximoNegativo == 0 & numero != 0)
+    {
+      if (numero < 0 & numero != 0)
+      {
+        maximoNegativo = numero;
+      }
+    }
+    else if (minimoPositivo == 0 & numero != 0)
+    {
+      if (numero > 0 & numero != 0)
+      {
+        minimoPositivo = numero;
+      }
+    }
+
+    else if (numero < 0 & numero != 0)
+    {
+      if (numero > maximoNegativo)
+      {
+        maximoNegativo = numero;
+      }
+    }
+    else if (numero > 0 & numero != 0)
+    {
+      if (numero < minimoPositivo)
+      {
+        minimoPositivo = numero;
+      }
+    }
   }
 
-  for (int i = 0; i < 10; i++)
-  {
-    if (i == 0)
-    {
-      maximo = lista[i];
-      minimo = lista[i];
-    }
-    else
-    if (lista[i] > maximo)
-    {
-      maximo = lista[i];
-    }
-    if (lista[i] < minimo)
-    {
-      minimo = lista[i];
-    }
-  }
-
-  cout << "El maximo es: " << maximo << endl;
-  cout << "El minimo es: " << minimo << endl;
+  cout << "El maximo de los negativos es: " << maximoNegativo << endl;
+  cout << "El minimo de los positivos es: " << minimoPositivo << endl;
 
   system("pause");
   return 0;
