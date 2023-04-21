@@ -14,7 +14,7 @@ int main()
   Se Ingresa 0 para finalizar el ingreso de cursos
   10 alumnos por curso
   */
-  int curso = 1, edad, sumaEdades, promedioEdad;
+  int curso = 1, edad, sumaEdades, promedioEdad, cantidadAlumnos = 10;
   while (curso != 0)
   {
     cout << "Ingrese el numero de curso: ";
@@ -22,13 +22,13 @@ int main()
     if (curso != 0)
     {
       sumaEdades = 0;
-      for (int i = 1; i <= 10; i++)
+      for (int i = 1; i <= cantidadAlumnos; i++)
       {
         cout << "Ingrese la edad del alumno " << i << ": ";
         cin >> edad;
         sumaEdades += edad;
       }
-      promedioEdad = sumaEdades / 10;
+      promedioEdad = sumaEdades / cantidadAlumnos;
       cout << "El promedio de edad del curso " << curso << " es: " << promedioEdad << endl;
     }
   }
