@@ -1,6 +1,6 @@
-/// Ejercicio: Ej19Ingresar5NumerosInformarLos2MayoresAclarandoMaximoySegundoMaximo
+/// Ejercicio: Ej19IngresarUnNumeroEInformarSiEsPrimoONo
 /// Autor: Diego Leonel Luque
-/// Fecha: 10/04/2023
+/// Fecha: 21/04/2023
 /// Comentario:
 
 #include <iostream>
@@ -10,28 +10,28 @@ using namespace std;
 
 int main()
 {
-  float numero[5];
-  cout << "Ingrese cinco numeros: " << endl;
-  for (int i = 0; i < 5; i++)
+  int numero, i=1, divisores = 0;
+
+  cout << "Ingrese un numero: ";
+  cin >> numero;
+
+  while (i <= numero)
   {
-    cin >> numero[i];
-  }
-  
-  for (int i = 0; i < 4; i++)
-  {
-    for (int j = i + 1; j < 5; j++)
+    if (numero % i == 0)
     {
-      if (numero[i] > numero[j])
-      {
-        float temp = numero[i];
-        numero[i] = numero[j];
-        numero[j] = temp;
-      }
+      divisores++;
     }
+    i++;
   }
   
-  cout << "El numero maximo es: " << numero[4] << endl;
-  cout << "El segundo numero maximo es: " << numero[3] << endl;
+  if (divisores == 2)
+  {
+    cout << "El numero es primo" << endl;
+  }
+  else
+  {
+    cout << "El numero no es primo" << endl;
+  }
 
   system("pause");
   return 0;
