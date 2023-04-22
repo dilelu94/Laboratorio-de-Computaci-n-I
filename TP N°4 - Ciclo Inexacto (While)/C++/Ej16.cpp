@@ -1,6 +1,6 @@
-/// Ejercicio: EjIngresarSieteNumerosInformarAnteultimoYUltimoImparIngresado
+/// Ejercicio: Ej16IngresarNumerosHastaIngresarUnCeroEInformarElMayorYSegundoMayor
 /// Autor: Diego Leonel Luque
-/// Fecha: 10/04/2023
+/// Fecha: 21/04/2023
 /// Comentario:
 
 #include <iostream>
@@ -10,24 +10,41 @@ using namespace std;
 
 int main()
 {
-  /*
-  Ejemplo 8, 4, -5, 6, 10, 5, 18 se informa -5 y 5.
-  */
-  int lista[7];
-  int anteUltimoImpar = 0;
-  int ultimoImpar = 0;
-  cout << "Ingrese 7 numeros: " << endl;
-  for (int i = 0; i < 7; i++)
+  float numero, mayor = 0, segundoMayor = 0;
+
+  do
   {
-    cin >> lista[i];
-    if (lista[i] % 2 != 0)
+    cout << "Ingrese un numero: ";
+    cin >> numero;
+
+    if (mayor == 0)
     {
-      anteUltimoImpar = ultimoImpar;
-      ultimoImpar = lista[i];
+      mayor = numero;
     }
+    else if (numero > mayor)
+    {
+      segundoMayor = mayor;
+      mayor = numero;
+    }
+    else if (numero > segundoMayor && numero != mayor)
+    {
+      segundoMayor = numero;
+    }
+  } while (numero != 0);
+
+  if (mayor == 0)
+  {
+    cout << "No se ingresaron numeros." << endl;
   }
-  cout << "El anteultimo numero impar es: " << anteUltimoImpar << endl;
-  cout << "El ultimo numero impar es: " << ultimoImpar << endl;
+  else if (segundoMayor == 0)
+  {
+    cout << "El unico numero ingresado es: " << mayor << endl;
+  }
+  else
+  {
+    cout << "El mayor es: " << mayor << endl;
+    cout << "El segundo mayor es: " << segundoMayor << endl;
+  }
 
   system("pause");
   return 0;

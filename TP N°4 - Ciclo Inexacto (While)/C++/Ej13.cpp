@@ -1,6 +1,6 @@
-/// Ejercicio: Ej13IngresarUnaListaDeDiezNumerosInformarElMaximoDeLosPares
+/// Ejercicio: Ej13IngresarNumerosHastaIngresarUnCeroInformarCualEsElAnteultimoYUltimoImparIngresado
 /// Autor: Diego Leonel Luque
-/// Fecha: 09/04/2023
+/// Fecha: 21/04/2023
 /// Comentario:
 
 #include <iostream>
@@ -10,33 +10,21 @@ using namespace std;
 
 int main()
 {
-
-  int lista[10];
-  int maximoPar = 0;
-  cout << "Ingrese 10 numeros: " << endl;
-  for (int i = 0; i < 10; i++)
+  int numero, anteultimo, ultimo;
+  while (numero != 0)
   {
-    cin >> lista[i];
-  }
-
-  for (int i = 0; i < 10; i++)
-  {
-    if (i == 0)
+    cout << "Ingrese un numero: ";
+    cin >> numero;
+    if (numero % 2 != 0)
     {
-      maximoPar = lista[i];
-    }
-    else if (lista[i] % 2 == 0)
-    {
-      if (lista[i] > maximoPar)
-      {
-        maximoPar = lista[i];
-      }
+      anteultimo = ultimo;
+      ultimo = numero;
     }
   }
 
-  cout << "El maximo de los pares es: " << maximoPar << endl;
+  cout << "El anteultimo numero impar ingresado es: " << anteultimo << endl;
+  cout << "El ultimo numero impar ingresado es: " << ultimo << endl;
 
-  cout << endl;
   system("pause");
   return 0;
 }

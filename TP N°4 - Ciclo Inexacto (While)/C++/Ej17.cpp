@@ -1,7 +1,7 @@
-/// Ejercicio: Ej17IngresarTresNumerosDistintosInformarElNumeroDelMedio
+/// Ejercicio: Ej17IngresarNumerosHastaQueSeIngresanDosNumerosConsecutivosIgualesEInformarElMaximo
 /// Autor: Diego Leonel Luque
-/// Fecha: 10/04/2023
-/// Comentario:
+/// Fecha: 21/04/2023
+/// Comentario: no descarto el ultimo numero pero tampoco influye(?)
 
 #include <iostream>
 #include <cstdlib>
@@ -10,26 +10,37 @@ using namespace std;
 
 int main()
 {
-    float numero[3];
-    cout << "Ingrese tres numeros distintos: " << endl;
-    cin >> numero[0] >> numero[1] >> numero[2];
+  float numero, numeroAnterior, maximo=0;
+  bool dosNumerosConsecutivosIgualesEncontrados = false;
 
-    // Ordenar los numeros de menor a mayor
-    for (int i = 0; i < 2; i++)
+  while (!dosNumerosConsecutivosIgualesEncontrados)
+  {
+    cout << "Ingrese un numero: ";
+    cin >> numero;
+
+    if (numero == numeroAnterior)
     {
-        for (int j = i + 1; j < 3; j++)
-        {
-            if (numero[i] > numero[j])
-            {
-                float temp = numero[i];
-                numero[i] = numero[j];
-                numero[j] = temp;
-            }
-        }
+      dosNumerosConsecutivosIgualesEncontrados = true;
     }
 
-    cout << "El numero del medio es: " << numero[1] << endl;
+    else if (numeroAnterior == 0)
+    {
+      maximo = numero;
+      numeroAnterior = numero;
+    }
+    else
+    {
+      if (numero > maximo)
+      {
+        maximo = numero;
+      }
+    }
 
-    system("pause");
-    return 0;
+    numeroAnterior = numero;
+  }
+
+  cout << "El maximo es: " << maximo << endl;  
+  
+  system("pause");
+  return 0;
 }

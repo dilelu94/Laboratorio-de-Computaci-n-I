@@ -1,6 +1,6 @@
-/// Ejercicio: Ej15IngresarUnaListaDeSieteNumerosInformarCualEsElPrimerYSegundoNumeroImpar
+/// Ejercicio: Ej14IngresarNumerosHastaIngresarUnCeroEInformarPosicionDelPrimerYSegundoNumeroImparIngresado
 /// Autor: Diego Leonel Luque
-/// Fecha: 10/04/2023
+/// Fecha: 21/04/2023
 /// Comentario:
 
 #include <iostream>
@@ -10,42 +10,35 @@ using namespace std;
 
 int main()
 {
+  int numero = 1, posicion = 0, posicionPrimerImpar = 0, posicionSegundoImpar = 0;
+  bool segundoImparEncontrado = false;
 
-  int lista[7];
-  int primerImpar = 0;
-  int segundoImpar = 0;
-  cout << "Ingrese 7 numeros: " << endl;
-  for (int i = 0; i < 7; i++)
+  while (numero != 0)
   {
-    cin >> lista[i];
-    if (lista[i] % 2 != 0)
+    cout << "Ingrese un numero: ";
+    cin >> numero;
+    posicion++;
+
+    if (numero % 2 != 0)
     {
-      if (primerImpar == 0)
+      if (posicionPrimerImpar == 0)
       {
-        primerImpar = lista[i];
+        posicionPrimerImpar = posicion;
       }
-      else if (segundoImpar == 0)
+      else
       {
-        segundoImpar = lista[i];
+        if (segundoImparEncontrado == false)
+        {
+          posicionSegundoImpar = posicion;
+          segundoImparEncontrado = true;
+        }
       }
     }
   }
 
-  if (primerImpar == 0 && segundoImpar == 0)
-  {
-    cout << "No se ingresaron numeros impares" << endl;
-  }
-  else if (segundoImpar == 0)
-  {
-    cout << "Solo se ingreso un numero impar: " << primerImpar << endl;
-  }
-  else
-  {
-    cout << "El primer numero impar es: " << primerImpar << endl;
-    cout << "El segundo numero impar es: " << segundoImpar << endl;
-  }
-
-  cout << endl;
+  cout << "La posicion del primer numero impar es: " << posicionPrimerImpar << endl;
+  cout << "La posicion del segundo numero impar es: " << posicionSegundoImpar << endl;
+    
   system("pause");
   return 0;
 }

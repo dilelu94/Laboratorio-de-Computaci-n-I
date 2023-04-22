@@ -1,6 +1,6 @@
-/// Ejercicio: Ej15IngresarUnaListaDeSieteNumerosYMostrarElPrimerYUltimoNumeroImparIngresado
+/// Ejercicio: Ej15IngresarNumerosHastaIngresarUnCeroEInformarSiEstanOrdenadosEnFormaCreciente
 /// Autor: Diego Leonel Luque
-/// Fecha: 10/04/2023
+/// Fecha: 21/04/2023
 /// Comentario:
 
 #include <iostream>
@@ -10,40 +10,46 @@ using namespace std;
 
 int main()
 {
+	/*
+		"Conjunto Ordenado"
+		"Conjunto No Ordenado"
+	*/
+	int numero = 1, numeroAnterior = 0;
+	bool ordenado = true;
 
-  int lista[7];
-  int primerImpar = 0;
-  int ultimoImpar = 0;
-  cout << "Ingrese 7 numeros: " << endl;
-  for (int i = 0; i < 7; i++)
-  {
-    cin >> lista[i];
-    if (lista[i] % 2 != 0)
-    {
-      ultimoImpar = lista[i];
-    }
-  }
+	while (numero != 0)
+	{
+		cout << "Ingrese un numero: ";
+		cin >> numero;
+		if (numeroAnterior == 0)
+		{
+			numeroAnterior = numero;
+		}
+		else
+		{
+			if (numero != 0)
+			{
+				if (numeroAnterior > numero)
+				{
+					ordenado = false;
+				}
+				numeroAnterior = numero;
+			}
+		}
+	}
 
-  for (int i = 0; i < 7; i++)
-  {
-    if (lista[i] % 2 != 0)
-    {
-      primerImpar = lista[i];
-      break; // exit the loop once the first odd number is found
-    }
-  }
+	if (numero == 0)
+	{
+		if (ordenado == true)
+		{
+			cout << "Conjunto Ordenado." << endl;
+		}
+		else
+		{
+			cout << "Conjunto No Ordenado." << endl;
+		}
+	}
 
-  if (primerImpar != 0)
-  {
-    cout << "El primer numero impar es: " << primerImpar << endl;
-    cout << "El ultimo numero impar es: " << ultimoImpar << endl;
-  }
-  else
-  {
-    cout << "No se ingresaron numeros impares." << endl;
-  }
-
-  cout << endl;
-  system("pause");
-  return 0;
+	system("pause");
+	return 0;
 }
