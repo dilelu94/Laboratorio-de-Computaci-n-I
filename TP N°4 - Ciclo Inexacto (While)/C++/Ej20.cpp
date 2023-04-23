@@ -1,6 +1,6 @@
-/// Ejercicio: Ej20IngresarUnNumeroEInformarCadaUnoDeLosDivisoresDeEseNumero
+/// Ejercicio: Ej20IngresarUnNumeroEInformarSiEsPerfectoONoPerfecto
 /// Autor: Diego Leonel Luque
-/// Fecha: 10/04/2023
+/// Fecha: 22/04/2023
 /// Comentario:
 
 #include <iostream>
@@ -10,19 +10,31 @@ using namespace std;
 
 int main()
 {
-  int numero;
-  int divisor[numero];
+  /*
+    Perfecto = Suma de sus divisores = Numero
+  */
+  int numero, sumaDivisores, divisor=1;
   cout << "Ingrese un numero: ";
   cin >> numero;
-  for (int i = 1; i <= numero; i++)
-  {
-    if (numero % i == 0)
-    {
-      divisor[i] = i;
-      cout << divisor[i] << endl;
-    }
-  }
 
+  while (divisor < numero)
+  {
+    if (numero % divisor == 0)
+    {
+      sumaDivisores += divisor;
+    }
+    divisor++;
+  }
+  
+  if (sumaDivisores == numero)
+  {
+    cout << "El numero es perfecto" << endl;
+  }
+  else
+  {
+    cout << "El numero no es perfecto" << endl;
+  }
+  
   system("pause");
   return 0;
 }

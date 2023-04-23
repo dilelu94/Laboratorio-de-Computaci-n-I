@@ -1,35 +1,45 @@
-/// Ejercicio: Ej23IngresarUnNumeroEInformarSiEsPrimoONo
+/// Ejercicio: Ej23IngresarContraseñaSiEsCorrectaMostrarMensajeDeBienvenidaSiEsIncorrectaMostrarMensajeContraseñaInvalidaTresVecesInvalidaMostrarMensajeDeIntentosAgotados
 /// Autor: Diego Leonel Luque
-/// Fecha: 10/04/2023
+/// Fecha: 22/04/2023
 /// Comentario:
 
-#include <iostream> 
+#include <iostream>
 #include <cstdlib>
 
 using namespace std;
 
 int main()
 {
-  int numero;
-  int CantidadDeDivisores = 0;
-  cout << "Ingrese un numero: ";
-  cin >> numero;
-  for (int i = 1; i <= numero; i++)
+  /*
+  Contraseña Correcta: "Bienvenido"
+  Contraseña Incorrecta: "Contraseña Invalida"
+  3 Contraseñas Incorrectas: "Intentos Agotados" y finalizar programa
+  contraseña: 1234
+  */
+
+  int intentos = 0, contraseña = 1234, contraseñaIngresada;
+
+  while (intentos < 3)
   {
-    if (numero % i == 0)
+    cout << "Ingrese la contraseña: ";
+    cin >> contraseñaIngresada;
+    if (contraseñaIngresada == contraseña)
     {
-      CantidadDeDivisores++;
+      cout << "Bienvenido" << endl;
+      break;
+    }
+    else
+    {
+      cout << "Contraseña Invalida" << endl;
+      intentos++;
     }
   }
-  if (CantidadDeDivisores == 2)
+
+  if (intentos == 3)
   {
-    cout << "El numero es primo" << endl;
+    cout << "Intentos Agotados" << endl;
   }
-  else
-  {
-    cout << "El numero no es primo" << endl;
-  }  
-  
+
   system("pause");
   return 0;
 }

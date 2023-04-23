@@ -1,6 +1,6 @@
-/// Ejercicio: Ej22IngresarUnNumeroEInformarLaCantidadDeDivisoresDeEseNumero
+/// Ejercicio: Ej22IngresarUnNumeroYMostrarloSeparadoPorComas
 /// Autor: Diego Leonel Luque
-/// Fecha: 10/04/2023
+/// Fecha: 22/04/2023
 /// Comentario:
 
 #include <iostream>
@@ -10,19 +10,20 @@ using namespace std;
 
 int main()
 {
-  int numero;
-  int divisores;
+  /*
+  
+  */
+  int resto, cosiente, base = 10;
   cout << "Ingrese un numero: ";
-  cin >> numero;
-  for (int i = 1; i <= numero; i++)
+  cin >> cosiente;
+  
+  while (cosiente != 0)
   {
-    if (numero % i == 0)
-    {
-      divisores++;
-    }
+    resto = cosiente % base;
+    cosiente = cosiente / base;
+    cout << resto << ",";
   }
-  cout << "La cantidad de divisores es: " << divisores << endl;
-
+  
   system("pause");
   return 0;
 }
