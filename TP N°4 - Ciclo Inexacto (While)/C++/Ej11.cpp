@@ -19,26 +19,26 @@ int main()
     cout << "Ingrese un numero: ";
     cin >> numero;
 
-    if (maximoNegativo == 0 & numero != 0)
+    if (maximoNegativo == 0 && numero != 0)
     {
       if (numero < 0 & numero != 0)
       {
         maximoNegativo = numero;
       }
     }
-    else if (minimoPositivo == 0 & numero != 0)
-    {
-      if (numero > 0 & numero != 0)
-      {
-        minimoPositivo = numero;
-      }
-    }
-
-    else if (numero < 0 & numero != 0)
+    else if (numero < 0 && numero != 0)
     {
       if (numero > maximoNegativo)
       {
         maximoNegativo = numero;
+      }
+    }
+
+    if (minimoPositivo == 0 && numero != 0)
+    {
+      if (numero > 0 & numero != 0)
+      {
+        minimoPositivo = numero;
       }
     }
     else if (numero > 0 & numero != 0)
