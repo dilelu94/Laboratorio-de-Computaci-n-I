@@ -1,45 +1,41 @@
-///Ejercicio: Ej10IngresarUnaListaDe10NumerosInformarElMaximoYLaPosicionDelMaximo
-///Autor: Diego Leonel Luque
-///Fecha: 09/04/2023
-///Comentario:
+/// Ejercicio: Ej10IngresarUnaListaDe10NumerosInformarElMaximoYLaPosicionDelMaximo
+/// Autor: Diego Leonel Luque
+/// Fecha: 09/04/2023
+/// Comentario:
 
-#include<iostream>
-#include<cstdlib>
+#include <iostream>
+#include <cstdlib>
 
 using namespace std;
 
-int main(){
+int main()
+{
 
-  int lista[10];
-  int maximo = 0;
-  int posicion = 0;
+  int posicion, numero, numeroMaximo, posicionDelMaximo;
 
   cout << "Ingrese 10 numeros: " << endl;
-  for (int i = 0; i < 10; i++)
+  for (posicion = 1; posicion <= 10; posicion++)
   {
-    cout << "Ingrese el elemento " << i + 1 << " de la lista: ";
-    cin >> lista[i];
-  }
-
-  for (int i = 0; i < 10; i++)
-  {
-    if (i == 0)
+    cout << "Ingrese el numero " << posicion << ": ";
+    cin >> numero;
+    if (posicion == 1)
     {
-      maximo = lista[i];
-      posicion = i+1;
+      numeroMaximo = numero;
     }
     else
-    if (lista[i] > maximo)
     {
-      maximo = lista[i];
-      posicion = i+1;
+      if (numero > numeroMaximo)
+      {
+        numeroMaximo = numero;
+        posicionDelMaximo = posicion;
+      }
     }
   }
 
-  cout << "El maximo es: " << maximo << endl;
-  cout << "La posicion del maximo es: " << posicion << endl;
+  cout << "El numero maximo es: " << numeroMaximo << endl;
+  cout << "La posicion del numero maximo es: " << posicionDelMaximo << endl;
 
-  cout<<endl;
+  cout << endl;
   system("pause");
   return 0;
 }

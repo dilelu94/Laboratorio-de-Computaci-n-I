@@ -1,6 +1,6 @@
-/// Ejercicio: EjNumero ejercicio
+/// Ejercicio: Ej01
 /// Autor: Diego Leonel Luque
-/// Fecha: 22/04/2023
+/// Fecha: 05/05/2023
 /// Comentario:
 
 #include <iostream>
