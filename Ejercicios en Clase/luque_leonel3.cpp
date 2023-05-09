@@ -32,7 +32,7 @@ int main()
   float sumaEdadMujeres = 0;
   int hipotermia = 0, normal = 0, fiebre = 0;
 
-  for (int pacientes = 1; pacientes <= 3; pacientes++)
+  for (int pacientes = 1; pacientes <= 5; pacientes++)
   {
     int numeroAfiliado;
     int edad;
@@ -72,9 +72,9 @@ int main()
   }
   cout << "El numero de afiliado del masculino con mayor temperatura es: " << numeroAfiliadoMasculinoMayor << endl;
   cout << "El promedio de edad de las mujeres es: " << sumaEdadMujeres / contadorMujeres << endl;
-  cout << "El porcentaje de pacientes con hipotermia es: " << ((float) hipotermia * 100) / 3 << "%" << endl;
-  cout << "El porcentaje de pacientes con temperatura normal es: " << ((float) normal * 100) / 3 << "%" << endl;
-  cout << "El porcentaje de pacientes con fiebre es: " << ((float) fiebre * 100) / 3 << "%" << endl;
+  cout << "El porcentaje de pacientes con hipotermia es: " << ((float) hipotermia * 100) / 5 << "%" << endl;
+  cout << "El porcentaje de pacientes con temperatura normal es: " << ((float) normal * 100) / 5 << "%" << endl;
+  cout << "El porcentaje de pacientes con fiebre es: " << ((float) fiebre * 100) / 5 << "%" << endl;
 
 
   system("pause");
