@@ -22,7 +22,7 @@ int main()
     int encomiendas = 0, sumaDeKilogramos = 0;
     bool kilogramosExedidos = false;
 
-    cout << "Ingrese kilogramos de encomienda: " << endl;
+    cout << "Ingrese kilogramos de las encomienda: " << endl;
     while (kilogramosExedidos == false && kilogramos >= 0)
     {
       cin >> kilogramos;
