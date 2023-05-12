@@ -24,7 +24,7 @@ int main()
   3.- Porcentaje de frutas y verduras.
   */
   int codigoDeProducto = 1, provinciaConMayorCantidadDeToneladas = 0, frutas = 0, verduras = 0, registros = 0, sumaToneladasDelProductoCincoAnterior = 0;
-  for (int provincia = 1; provincia <= 3; provincia++)
+  for (int provincia = 1; provincia <= 5; provincia++)
   {
       codigoDeProducto = 1;
       int toneladasExportadas = 0, importe = 0;
