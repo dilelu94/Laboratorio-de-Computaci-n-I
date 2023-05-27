@@ -3,7 +3,6 @@
 /// Fecha: 26/05/2023
 /// Comentario:
 
-#include "funciones.h"
 #include <iostream>
 #include <cstdlib>
 
