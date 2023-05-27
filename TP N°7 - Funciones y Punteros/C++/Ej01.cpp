@@ -1,4 +1,4 @@
-/// Ejercicio: Ej01IngresarUnNumeroYMostrarlo
+/// Ejercicio: Ej01FuncionQueIngresarUnNumeroYMostrarlo
 /// Autor: Diego Leonel Luque
 /// Fecha: 26/05/2023
 /// Comentario:
