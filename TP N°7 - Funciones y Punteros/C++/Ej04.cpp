@@ -1,4 +1,4 @@
-/// Ejercicio: Ej02FuncionQueRecibaDosNumerosYRetorneLaSumaDeAmbos
+/// Ejercicio: Ej04FuncionQueRecibaDosNumerosYRetorneElMayor
 /// Autor: Diego Leonel Luque
 /// Fecha: 27/05/2023
 /// Comentario:
@@ -8,9 +8,16 @@
 
 using namespace std;
 
-int sumaDeDosNumeros(int numero1, int numero2)
+int mayorDeDosNumeros(int numero1, int numero2)
 {
-  return numero1 + numero2;
+  if (numero1 > numero2)
+  {
+    return numero1;
+  }
+  else
+  {
+    return numero2;
+  }
 }
 
 int main()
@@ -21,9 +28,7 @@ int main()
   cout << "Ingrese otro numero: ";
   cin >> numero2;
 
-  int resultadoSuma = sumaDeDosNumeros(numero1, numero2);
-
-  cout << "La suma de ambos numeros es: " << resultadoSuma << endl;
+  cout << "El mayor de ambos numeros es: " << mayorDeDosNumeros(numero1, numero2) << endl;
   
   system("pause");
   return 0;
