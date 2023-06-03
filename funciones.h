@@ -32,6 +32,8 @@ void copiarVector(int v[], int v2[], int tam); /// copia el vector v en v2
 
 bool compararVectores(int v[], int v2[], int tam); // compara los dos vectores que recibe. Si son iguales ///devuelve true, si no devuelve false
 
+int maximoValorDelVector(int v[], int tam); /// devuelve el valor máximo del vector
+
 #endif // FUNCTIONS_H_INCLUDED
 
 /// Desarrollo de funciones / Definiciones
@@ -164,4 +166,17 @@ void cargarVector(int v[], int tam)
         cout << "INGRESE NUMERO: ";
         cin >> v[i];
     }
+}
+
+int maximoValorDelVector(int v[], int tam)
+{
+    int i, maximo = v[0];
+    for (i = 1; i < tam; i++)
+    {
+        if (v[i] > maximo)
+        {
+            maximo = v[i];
+        }
+    }
+    return maximo;
 }
