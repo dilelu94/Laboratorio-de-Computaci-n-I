@@ -16,6 +16,7 @@ void mostrarVector(int v[], int tam); /// muestra lo que contiene cada una de la
 void ponerCero(int v[], int tam); /// pone en 0 todas las posiciones del vector
 
 int posicionNumeroEnVector(int v[], int tam, int numero); /// devuelve la posición que ocupa un número que se //envía como parámetro. Devuelve la primera posición que encuentra el número. Si no lo encuentra devuelve -1
+
 int contarNumerosRepetidos(int v[], int tam, int numero); /// cuenta la cantidad de veces que se repite un //número en el vector
 
 int maximoVector(int v[], int tam); /// devuelve  la posición (primera) que ocupa el máximo en el vector
@@ -33,6 +34,8 @@ void copiarVector(int v[], int v2[], int tam); /// copia el vector v en v2
 bool compararVectores(int v[], int v2[], int tam); // compara los dos vectores que recibe. Si son iguales ///devuelve true, si no devuelve false
 
 int maximoValorDelVector(int v[], int tam); /// devuelve el valor máximo del vector
+
+int buscarNumeroEnVector(int v[], int tam, int numero); /// devuelve la posición que ocupa un número que se //envía como parámetro. Devuelve la primera posición que encuentra el número. Si no lo encuentra devuelve -1
 
 #endif // FUNCTIONS_H_INCLUDED
 
@@ -179,4 +182,15 @@ int maximoValorDelVector(int v[], int tam)
         }
     }
     return maximo;
+}
+
+int buscarNumeroEnVector(int v[], int tam, int numero)
+{
+    int i;
+    for (i = 0; i < tam; i++)
+    {
+        if (v[i] == numero)
+            return i;
+    }
+    return -1;
 }
