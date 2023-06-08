@@ -8,17 +8,7 @@
 
 using namespace std;
 
-void mostrarDivisores(int num)
-{
-  for (int i = 1; i <= num; i++)
-  {
-    if (num % i == 0)
-    {
-      cout << i << endl;
-    }
-  }
-  return;
-}
+void mostrarDivisores(float num);
 
 int main()
 {
@@ -30,4 +20,16 @@ int main()
   
   system("pause");
   return 0;
+}
+
+void mostrarDivisores(int num)
+{
+  for (int i = 1; i <= num; i++)
+  {
+    if (num % i == 0)
+    {
+      cout << i << endl;
+    }
+  }
+  return;
 }

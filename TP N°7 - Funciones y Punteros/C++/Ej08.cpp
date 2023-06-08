@@ -9,23 +9,7 @@
 
 using namespace std;
 
-void calcularEdad(int diaNac, int mesNac, int anioNac, int diaAct, int mesAct, int anioAct)
-{
-  int edad = anioAct - anioNac;
-  if (mesAct < mesNac)
-  {
-    edad--;
-  }
-  else if (mesAct == mesNac)
-  {
-    if (diaAct < diaNac)
-    {
-      edad--;
-    }
-  }
-  cout << "La edad es: " << edad << endl;
-  return;
-}
+void calcularEdad(int diaNac, int mesNac, int anioNac, int diaAct, int mesAct, int anioAct);
 
 int main()
 {
@@ -54,4 +38,22 @@ int main()
 
   system("pause");
   return 0;
+}
+
+void calcularEdad(int diaNac, int mesNac, int anioNac, int diaAct, int mesAct, int anioAct)
+{
+  int edad = anioAct - anioNac;
+  if (mesAct < mesNac)
+  {
+    edad--;
+  }
+  else if (mesAct == mesNac)
+  {
+    if (diaAct < diaNac)
+    {
+      edad--;
+    }
+  }
+  cout << "La edad es: " << edad << endl;
+  return;
 }

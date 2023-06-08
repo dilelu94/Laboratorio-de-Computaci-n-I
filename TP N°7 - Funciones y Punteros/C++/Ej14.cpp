@@ -8,6 +8,18 @@
 
 using namespace std;
 
+void vectorIntercambiado(int v[], int tam, int pos1, int pos2);
+
+int main()
+{
+  int vector[5] = {1, 2, 3, 4, 5}; // 1, 4 , 3, 2, 5
+
+  vectorIntercambiado(vector, 5, 1, 3);
+  
+  system("pause");
+  return 0;
+}
+
 void vectorIntercambiado(int v[], int tam, int pos1, int pos2)
 {
   int i, aux;
@@ -30,14 +42,4 @@ void vectorIntercambiado(int v[], int tam, int pos1, int pos2)
   }  
 
   return;
-}
-
-int main()
-{
-  int vector[5] = {1, 2, 3, 4, 5}; // 1, 4 , 3, 2, 5
-
-  vectorIntercambiado(vector, 5, 1, 3);
-  
-  system("pause");
-  return 0;
 }

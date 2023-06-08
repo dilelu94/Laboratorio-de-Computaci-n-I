@@ -8,21 +8,11 @@
 
 using namespace std;
 
-int mayorDeDosNumeros(int numero1, int numero2)
-{
-  if (numero1 > numero2)
-  {
-    return numero1;
-  }
-  else
-  {
-    return numero2;
-  }
-}
+float mayorDeDosNumeros(float numero1, float numero2);
 
 int main()
 {
-  int numero1, numero2;
+  float numero1, numero2;
   cout << "Ingrese un numero: ";
   cin >> numero1;
   cout << "Ingrese otro numero: ";
@@ -32,4 +22,16 @@ int main()
   
   system("pause");
   return 0;
+}
+
+float mayorDeDosNumeros(float numero1, float numero2)
+{
+  if (numero1 > numero2)
+  {
+    return numero1;
+  }
+  else
+  {
+    return numero2;
+  }
 }

@@ -12,7 +12,7 @@ void sumaYProducto(float num1, float num2);
 
 int main()
 {
-  int numero1, numero2;
+  float numero1, numero2;
   
   cout << "Ingrese un numero: ";
   cin >> numero1;

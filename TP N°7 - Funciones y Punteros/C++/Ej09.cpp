@@ -8,19 +8,7 @@
 
 using namespace std;
 
-int esBisiesto(int anio)
-{
-  int bisiesto = 0;
-  if (anio % 4 == 0 && anio % 100 != 0 || anio % 400 == 0)
-  {
-    bisiesto = 1;
-  }
-  else
-  {
-    bisiesto = 0;
-  }
-  return bisiesto;
-}
+int esBisiesto(int anio);
 
 int main()
 {
@@ -41,4 +29,18 @@ int main()
   
   system("pause");
   return 0;
+}
+
+int esBisiesto(int anio)
+{
+  int bisiesto = 0;
+  if (anio % 4 == 0 && anio % 100 != 0 || anio % 400 == 0)
+  {
+    bisiesto = 1;
+  }
+  else
+  {
+    bisiesto = 0;
+  }
+  return bisiesto;
 }

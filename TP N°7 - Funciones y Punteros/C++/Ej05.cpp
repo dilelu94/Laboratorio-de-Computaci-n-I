@@ -8,22 +8,11 @@
 
 using namespace std;
 
-int mayorDeUnaListaDeTresNumeros(int num[])
-{
-  int mayor = num[0];
-  for (int i = 1; i < 3; i++)
-  {
-    if (num[i] > mayor)
-    {
-      mayor = num[i];
-    }
-  }
-  return mayor;
-}
+float mayorDeUnaListaDeTresNumeros(float num[]);
 
 int main()
 {
-  int numeros[3];
+  float numeros[3];
 
   for (int i = 0; i < 3; i++)
   {
@@ -35,4 +24,17 @@ int main()
 
   system("pause");
   return 0;
+}
+
+float mayorDeUnaListaDeTresNumeros(float num[])
+{
+  float mayor = num[0];
+  for (int i = 1; i < 3; i++)
+  {
+    if (num[i] > mayor)
+    {
+      mayor = num[i];
+    }
+  }
+  return mayor;
 }

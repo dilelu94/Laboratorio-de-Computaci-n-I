@@ -8,10 +8,7 @@
 
 using namespace std;
 
-int promedioDeTresNumeros(int num1, int num2, int num3)
-{
-  return (num1 + num2 + num3) / 3;
-}
+float promedioDeTresNumeros(float num1, float num2, float num3);
 
 int main()
 {
@@ -42,4 +39,9 @@ int main()
 
   system("pause");
   return 0;
+}
+
+float promedioDeTresNumeros(float num1, float num2, float num3)
+{
+  return (num1 + num2 + num3) / 3;
 }

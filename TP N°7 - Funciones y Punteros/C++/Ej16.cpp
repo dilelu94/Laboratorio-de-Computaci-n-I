@@ -8,6 +8,20 @@
 
 using namespace std;
 
+void vectorDeLosRepetidos(int v1[], int v2[]);
+
+int main()
+{
+  int vector1[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+  int vector2[10] = {1, 2, 3, 14, 15, 16, 17, 18, 9, 10};
+  // 1, 2, 3, 9, 10
+
+  vectorDeLosRepetidos(vector1, vector2);
+
+  system("pause");
+  return 0;
+}
+
 void vectorDeLosRepetidos(int v1[], int v2[])
 {
   int k = 0, v3[10];
@@ -35,16 +49,4 @@ void vectorDeLosRepetidos(int v1[], int v2[])
   {
     cout << v3[i] << endl;
   }
-}
-
-int main()
-{
-  int vector1[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-  int vector2[10] = {1, 2, 3, 14, 15, 16, 17, 18, 9, 10};
-  // 1, 2, 3, 9, 10
-
-  vectorDeLosRepetidos(vector1, vector2);
-
-  system("pause");
-  return 0;
 }

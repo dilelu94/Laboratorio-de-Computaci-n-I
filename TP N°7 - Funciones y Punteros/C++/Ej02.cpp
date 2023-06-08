@@ -8,10 +8,7 @@
 
 using namespace std;
 
-int sumaDeDosNumeros(int numero1, int numero2)
-{
-  return numero1 + numero2;
-}
+float sumaDeDosNumeros(float num1, float num2);
 
 int main()
 {
@@ -27,4 +24,9 @@ int main()
   
   system("pause");
   return 0;
+}
+
+float sumaDeDosNumeros(float num1, float num2)
+{
+  return num1 + num2;
 }

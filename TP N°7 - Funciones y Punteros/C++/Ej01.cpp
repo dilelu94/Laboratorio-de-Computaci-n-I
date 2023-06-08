@@ -8,17 +8,11 @@
 
 using namespace std;
 
-void mostrarTresVeces(int numero)
-{
-  cout << numero << endl;
-  cout << numero << endl;
-  cout << numero << endl;
-  return;
-}
+void mostrarTresVeces(float numero);
 
 int main()
 {
-  int numero;
+  float numero;
   cout << "Ingrese un numero: ";
   cin >> numero;
 
@@ -26,4 +20,12 @@ int main()
 
   system("pause");
   return 0;
+}
+
+void mostrarTresVeces(float numero)
+{
+  cout << numero << endl;
+  cout << numero << endl;
+  cout << numero << endl;
+  return;
 }

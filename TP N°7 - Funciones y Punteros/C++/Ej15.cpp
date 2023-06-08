@@ -8,6 +8,18 @@
 
 using namespace std;
 
+int vectorOrdenado(int v[], int tam);
+
+int main()
+{
+  int vector[5] = {1, 4, 3, 2, 5}; // 1, 4 , 3, 2, 5 = 0
+
+  cout << vectorOrdenado(vector, 5) << endl;
+  
+  system("pause");
+  return 0;
+}
+
 int vectorOrdenado(int v[], int tam)
 {
   int i, ordenado = 1;
@@ -20,14 +32,4 @@ int vectorOrdenado(int v[], int tam)
   }
   
   return ordenado;
-}
-
-int main()
-{
-  int vector[5] = {1, 4, 3, 2, 5}; // 1, 4 , 3, 2, 5 = 0
-
-  cout << vectorOrdenado(vector, 5) << endl;
-  
-  system("pause");
-  return 0;
 }

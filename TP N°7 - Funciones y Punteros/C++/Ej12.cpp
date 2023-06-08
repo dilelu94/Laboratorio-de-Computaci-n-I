@@ -8,15 +8,7 @@
 
 using namespace std;
 
-int sumarVector(int v[], int tam)
-{
-  int i, suma = 0;
-  for (i = 0; i < tam; i++)
-  {
-    suma += v[i];
-  }
-  return suma;
-}
+int sumarVector(int v[], int tam);
 
 int main()
 {
@@ -26,4 +18,14 @@ int main()
 
   system("pause");
   return 0;
+}
+
+int sumarVector(int v[], int tam)
+{
+  int i, suma = 0;
+  for (i = 0; i < tam; i++)
+  {
+    suma += v[i];
+  }
+  return suma;
 }
