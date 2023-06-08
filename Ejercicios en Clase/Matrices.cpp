@@ -45,7 +45,7 @@ int main()
   return 0;
 }
 
-void ponerCeroM(float m[12][31], int fila, int columna)
+void ponerCeroM(float m[][31], int fila, int columna)
 {
   int i, j;
   for (i = 0; i < fila; i++)

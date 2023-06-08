@@ -8,12 +8,7 @@
 
 using namespace std;
 
-void sumaYProducto(int num1, int num2)
-{
-  cout << "La suma de los numeros es: " << num1 + num2 << endl;
-  cout << "El producto de los numeros es: " << num1 * num2 << endl;
-  return;
-}
+void sumaYProducto(float num1, float num2);
 
 int main()
 {
@@ -29,3 +24,12 @@ int main()
   system("pause");
   return 0;
 }
+
+// 6) Escribir una función que reciba dos números y retorne la suma y el producto de ambos. 
+void sumaYProducto(float num1, float num2)
+{
+  cout << "La suma de los numeros es: " << num1 + num2 << endl;
+  cout << "El producto de los numeros es: " << num1 * num2 << endl;
+  return;
+}
+
