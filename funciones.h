@@ -194,3 +194,22 @@ int buscarNumeroEnVector(int v[], int tam, int numero)
     }
     return -1;
 }
+
+float promedioVector(int v[], int tam)
+{
+    int i, suma = 0;
+    float promedio;
+    for (i = 0; i < tam; i++)
+    {
+        suma += v[i];
+    }
+    promedio = (float)suma / tam;
+    return promedio;
+}
+
+float promedio(float suma, int tam)
+{
+    float promedio;
+    promedio = (float)suma / tam;
+    return promedio;
+}
