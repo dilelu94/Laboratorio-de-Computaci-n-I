@@ -1,11 +1,6 @@
 #ifndef FUNCIONES_H_INCLUDED
 #define FUNCIONES_H_INCLUDED
 
-#include<iostream>
-#include<cstdlib>
-
-using namespace std;
-
 #include "funciones.cpp"
 
 /// DECLARACIÓN/PROTOTIPO DE FUNCIONES
