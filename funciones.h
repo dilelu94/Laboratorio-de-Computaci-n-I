@@ -6,6 +6,8 @@
 
 using namespace std;
 
+#include "funciones.cpp"
+
 /// DECLARACIÓN/PROTOTIPO DE FUNCIONES
 void cargarVector(int v[], int tam); /// asigna valores a cada una de las posiciones del vector
 
