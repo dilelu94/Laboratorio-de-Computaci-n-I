@@ -12,6 +12,9 @@ using namespace std;
 
 int main()
 {
+  /*
+
+  */
   int opcion, vector[5], posicionMax;
   while (true)
   {
@@ -37,6 +40,8 @@ int main()
     case 1:
       // cargarVector(vector, 5);
       cargarAleatorio(vector, 5, 100);
+      cout << "Vector Cargado" << endl;
+      system("pause");
       break;
 
     case 2:
@@ -67,3 +72,4 @@ int main()
   system("pause");
   return 0;
 }
+
